@@ -21,6 +21,7 @@ export class MineGruAltCoinsPipe implements PipeTransform {
 
   @memo()
   transform(value: any, args?: any): any {
+    console.log('Calculating alt coin value: ' + value);
     return mineGruAltCoins(value);
   }
 
