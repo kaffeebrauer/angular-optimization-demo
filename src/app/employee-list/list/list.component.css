@@ -1,0 +1,22 @@
+
+h1 {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 35px;
+}
+
+.name {
+  font-size: 25px;
+}
+
+.data {
+  margin-left: 25px;
+}
+
+i.fa-trash-o {
+  cursor: pointer;
+}
+
+mat-chip-list {
+  margin-right: 15px;
+}

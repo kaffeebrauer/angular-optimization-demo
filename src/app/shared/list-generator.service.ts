@@ -1,15 +1,17 @@
+import { List } from 'immutable';
+
 export interface EmployeeData {
   label: string;
   num: number;
 }
 
 export class ListGenerator {
-  generate(firstNames: string[], surnameNames: string[], numRange: [number, number], width: number): EmployeeData[] {
+  generate(firstNames: string[], surnameNames: string[], numRange: [number, number], width: number): List<EmployeeData> {
     const result: EmployeeData[] = [];
     for (let i = 0; i < width; i += 1) {
       result.push(this.generateNode(firstNames, surnameNames, numRange));
     }
-    return result;
+    return List(result);
   }
 
   generateNumber(numRange: [number, number]) {

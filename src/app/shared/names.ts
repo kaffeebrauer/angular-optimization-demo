@@ -23,6 +23,10 @@ export const Names: string[] = [
   'Chris',
   'Darwin',
   'Mel',
+  'Alex',
+  'Dick',
+  'Harry',
+  'Herb'
 ];
 
 export const Surnames: string[] = [
