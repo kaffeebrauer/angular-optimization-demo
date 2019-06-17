@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import memo from 'memo-decorator';
+import memo from 'memo-decorator'; //https://www.npmjs.com/package/memo-decorator
 
 const mineGruAltCoins = (num: number): number => {
   if (num === 1 || num === 2) {

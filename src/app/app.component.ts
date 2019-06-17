@@ -15,13 +15,13 @@ const NumRange: [number, number] = [23, 28];
       [data]="salesList"
       department="Sales"
       (add)="salesList = add(salesList, $event)"
-      (remove)="salesList = remove(salesList, $event)"
+      (remove)="remove(salesList, $event)"
     ></sd-employee-list>
     <sd-employee-list
       [data]="rndList"
       department="R&D"
       (add)="rndList = add(rndList, $event)"
-      (remove)="rndList = remove(rndList, $event)"
+      (remove)="remove(rndList, $event)"
     ></sd-employee-list>
   `,
   styleUrls: ['app.component.css']
