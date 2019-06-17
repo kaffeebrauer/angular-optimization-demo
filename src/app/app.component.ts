@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
 import { ListGenerator, EmployeeData } from './shared/list-generator.service';
-import { Names } from './shared/names';
+import { Names, Surnames } from './shared/names';
+import { Component, OnInit } from '@angular/core';
 
 const NumRange: [number, number] = [23, 28];
 
@@ -29,11 +28,11 @@ export class AppComponent implements OnInit {
   rndList: EmployeeData[];
   label: string;
 
-  constructor(private generator: ListGenerator) {}
+  constructor(private generator: ListGenerator) { }
 
   ngOnInit() {
-    this.salesList = this.generator.generate(Names, NumRange, 10);
-    this.rndList = this.generator.generate(Names, NumRange, 10);
+    this.salesList = this.generator.generate(Names, Surnames, NumRange, 10);
+    this.rndList = this.generator.generate(Names, Surnames, NumRange, 10);
   }
 
   add(list: EmployeeData[], name: string) {

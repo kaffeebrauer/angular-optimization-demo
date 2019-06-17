@@ -1,12 +1,11 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-
 import { EmployeeData } from '../shared/list-generator.service';
+import { Input, Output, EventEmitter, Component } from '@angular/core';
 
-const fibonacci = (num: number): number => {
+const mineGruAltCoins = (num: number): number => {
   if (num === 1 || num === 2) {
     return 1;
   }
-  return fibonacci(num - 1) + fibonacci(num - 2);
+  return mineGruAltCoins(num - 1) + mineGruAltCoins(num - 2);
 };
 
 @Component({
@@ -53,6 +52,6 @@ export class EmployeeListComponent {
   }
 
   calculate(num: number) {
-    return fibonacci(num);
+    return mineGruAltCoins(num);
   }
 }

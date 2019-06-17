@@ -4,10 +4,10 @@ export interface EmployeeData {
 }
 
 export class ListGenerator {
-  generate(labels: string[], numRange: [number, number], width: number): EmployeeData[] {
+  generate(firstNames: string[], surnameNames: string[], numRange: [number, number], width: number): EmployeeData[] {
     const result: EmployeeData[] = [];
     for (let i = 0; i < width; i += 1) {
-      result.push(this.generateNode(labels, numRange));
+      result.push(this.generateNode(firstNames, surnameNames, numRange));
     }
     return result;
   }
@@ -17,13 +17,13 @@ export class ListGenerator {
     return numRange[0] + Math.floor(Math.random() * diff);
   }
 
-  generateLabel(labels: string[]) {
-    return labels[Math.floor(Math.random() * labels.length)];
+  generateNames(firstNames: string[], surnameNames: string[]) {
+    return firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + surnameNames[Math.floor(Math.random() * surnameNames.length)];
   }
 
-  private generateNode(labels: string[], numRange: [number, number]): EmployeeData {
+  private generateNode(firstNames: string[], surnameNames: string[], numRange: [number, number]): EmployeeData {
     return {
-      label: this.generateLabel(labels),
+      label: this.generateNames(firstNames, surnameNames),
       num: this.generateNumber(numRange)
     };
   }
